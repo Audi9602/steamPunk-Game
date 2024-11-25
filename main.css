@@ -1,0 +1,194 @@
+html {
+  font-family: "Staatliches";
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; 
+}
+/*
+dotlottie-player {
+    align-self: self-start;
+    border-radius: 100%;
+    overflow: hidden;
+}
+*/
+body:not(.loaded) .loaded {
+    background: url(GIFS/preload.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; 
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* When the loaded class is added */
+body.loaded .loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* H1 styling */
+.first-section {
+    font-size: 3rem;
+	  color: white;
+    font-family: "Play", sans-serif;
+}
+.first-section .type{
+    padding: 2rem 1rem;
+    width: auto;
+    margin: auto;
+}
+.first-section h3 {
+    width: 13ch;
+    border-right: 4px solid white;
+    margin: 2rem auto;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(13, end), blink-caret 0.5s step-end infinite alternate;
+}
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /*background-color: #987D9A;*/
+  }
+
+  /*Game Play*/
+
+. .game-play {
+  font-family: "Staatliches";
+  position: relative; 
+  width: 100%;
+  height: 100%;
+  background: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-play::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(GIFS/start.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: sepia(1) blur(10px); 
+  z-index: 1; 
+}
+
+
+.game-play-content {
+  font-family: "Staatliches";
+  position: relative;
+  z-index: 2; 
+  display: flex;               
+  justify-content: center;     
+  align-items: center;
+  gap: 20px;
+}
+
+/* Button styling */
+.glow-on-hover {
+  font-family: "Staatliches";
+  font-size: medium;
+  z-index: 3; 
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  margin-right: 445px;
+}
+
+.glow-on-hover next {
+  font-size: medium;
+}
+
+.glow-on-hover:before {
+  font-family: "Staatliches";
+  content: '';
+  background: linear-gradient(45deg, #824D74, #A87676, #FFE7C1, #AC87C5, #818FB4, #E36BAE, #F8E559, #9290C3, #ADDDD0);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  font-family: "Staatliches";
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+footer {
+  position: fixed;         
+  bottom: 0;               
+  width: 100%;             
+  color: #fff;             
+  text-align: center;      
+  padding: 10px 0;         
+  font-size: 1rem;         
+  z-index: 1000;           
+}
+
+  
